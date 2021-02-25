@@ -8,13 +8,16 @@
 .product h4{
     color: blue;
     font-weight: 400;
+    cursor: pointer;
 }
 .product img{
     margin: 10px;
 }
 .product-description button{
-    background-color: #f9c25d;
-    padding: 5px 50px;
+    background-color: rgb(233, 188, 75);
+    width: 190px;
+    height: 30px;
     border-radius: 5px;
-   border: 1px solid gray;
+    border: 1px solid gray;
+    cursor: pointer;
 }
