@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import fakeData from '../../../fakeData';
+import fakeData from '../../fakeData';
 import Product from '../Product/Product';
+import Cart from '../Cart/Cart';
 import './Shop.css'
 
 const Shop = () => {
@@ -10,12 +11,12 @@ const Shop = () => {
     // console.log(first10);
 
     // order Summery
-    const [card, setCard] = useState([]);
+    const [cart, setCart] = useState([]);
 
-    const handleAddProduct = (product) => {
-        // console.log("added", product);
-        const newCard = [...card, product];
-        setCard(newCard);
+    const handleAddProduct = (pd) => {
+        // console.log("added", pd);
+        const newCart = [...cart, pd];
+        setCart(newCart);
     }
     return (
         <div className="shop-container">
@@ -26,17 +27,12 @@ const Shop = () => {
                         product={product}></Product>)
                 }
             </div>
-            <div className="card-container">
-                <h3>Order Summery</h3>
-                <p>Items Ordered: {card.length}</p>
-                <p>Product Price: </p>
-                <p>Tax: </p>
-                <p><small>Shipping: </small></p>
-                <p>Total Price: </p>
-                <button className="product-btn">Review Order</button>
+            <div className="cart-container">
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
 };
+
 
 export default Shop;
