@@ -1,3 +1,4 @@
+/* Header Part */
 .header img{
     height: 80px;
 }
@@ -19,3 +20,10 @@
 .header nav a:hover{
     background-color: gray;
 }
+/* End Header Part */
+
+
+
+/* Product Item Part */
+
+/* End Product Item Part */
