@@ -5,13 +5,14 @@ import './Shop.css'
 
 const Shop = () => {
     const first10 = fakeData.slice(0, 10);
+    // eslint-disable-next-line no-unused-vars
     const [products, setProducts] = useState(first10)
     console.log(first10);
     return (
         <div className="shop-container">
             <div className="product-container">
                 {
-                    products.map(product => <Product>{product.name}</Product>)
+                    products.map(product => <Product product={product}></Product>)
                 }
             </div>
             <div className="card-container">
