@@ -14,7 +14,7 @@ const Cart = (props) => {
 
     //ShippingCost
     let shipping = 0;
-    if(total > 35){
+    if(total > 200){
         shipping = 0;
     }
     else if(total > 15){
