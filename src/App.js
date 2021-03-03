@@ -26,7 +26,7 @@ function App() {
           <Route path="/inventory">
             <Inventory></Inventory>
           </Route>
-          <Route path="/*">
+          <Route exact path="/*">
             <NotFound></NotFound>
           </Route>
         </Switch>
