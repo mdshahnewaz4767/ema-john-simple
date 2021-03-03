@@ -38,11 +38,11 @@ const Cart = (props) => {
     return (
         <div>
             <h4>Order Summery</h4>
-            <p>Items Ordered: {cart.length}</p>
-            <p>Product Price: {formatNumber(total)}</p>
-            <p>Shipping Cost: {shipping}</p>
-            <p>Tax + VAT: {formatNumber(tax)}</p>
-            <p>Total Price: {grandTotal}</p>
+            <p>Items Ordered: ${cart.length}</p>
+            <p>Product Price: ${formatNumber(total)}</p>
+            <p>Shipping Cost: ${shipping}</p>
+            <p>Tax + VAT: ${formatNumber(tax)}</p>
+            <p>Total Price: ${grandTotal}</p>
             <button className="product-btn">Review Order</button>
         </div>
     );
