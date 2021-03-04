@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import fakeData from '../../fakeData';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
+import  { addToDatabaseCart } from '../../utilities/databaseManager';
 import './Shop.css'
 
 const Shop = () => {
@@ -17,6 +18,9 @@ const Shop = () => {
         // console.log("added", pd);
         const newCart = [...cart, pd];
         setCart(newCart);
+        const sameProduct = newCart.filter(product => product.key === pd.key);
+        const count = sameProduct.length;
+        addToDatabaseCart(pd.key, count);
     }
     return (
         <div className="shop-container">
