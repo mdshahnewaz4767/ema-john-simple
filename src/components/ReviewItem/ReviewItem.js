@@ -3,7 +3,7 @@ import "./ReviewItem.css";
 
 const ReviewItem = (props) => {
     // console.log(props);
-    const {name, quantity} = props.product;
+    const {name, quantity, key} = props.product;
     const reviewItemStyle = {
         borderBottom: '1px solid lightgray',
         marginBottom: '5px',
@@ -15,7 +15,7 @@ const ReviewItem = (props) => {
             <h4 className="product-name">{name}</h4>
             <p>Quantity: {quantity}</p>
             <br/>
-            <button className="product-btn">Remove</button>
+            <button onClick={() => props.removeProduct(key)} className="product-btn">Remove</button>
         </div>
     );
 };
