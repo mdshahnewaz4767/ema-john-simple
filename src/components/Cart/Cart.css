@@ -1,0 +1,9 @@
+.product-btn{
+    background-color: rgb(233, 188, 75);
+    width: 190px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    cursor: pointer;
+    text-decoration: none;
+}
