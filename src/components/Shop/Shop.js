@@ -3,7 +3,8 @@ import fakeData from '../../fakeData';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import  { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
-import './Shop.css'
+import './Shop.css';
+import { Link } from 'react-router-dom';
 
 const Shop = () => {
     const first10 = fakeData.slice(0, 10);
@@ -55,7 +56,11 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                    <Link to="/review">
+                        <button className="product-btn">Review Order</button>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );

@@ -1,0 +1,7 @@
+.product-name{
+    font-weight: 400;
+    color: blue;
+}
+.product-name:-webkit-any-link{
+    text-decoration: none;
+}
