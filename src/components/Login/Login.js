@@ -99,19 +99,14 @@ function Login() {
         <button onClick={googleSignIn}>Sign in</button>
       }
       <br/>
-      {/* <button onClick={handleGoogleSignIn}>Sign in</button> */}
       <button onClick={fbSignIn}>Sign in using Facebook</button>
       {
         user.isSignedIn && <div><p>Welcome, {user.name}</p>
         <p>Your email: {user.email}</p></div>
       }
-
       <h1>Our own Authentication</h1>
       <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="newUser"/>
       <label htmlFor="newUser">New User Sign Up</label>
-      <p>Name: {user.name}</p>
-      <p>Email: {user.email}</p>
-      <p>Password: {user.password}</p>
       <form onSubmit={handleSubmit}>
         {newUser && <input type="text" name="name" onBlur={handleBlur} placeholder="Your name"/>}
         <br/>
