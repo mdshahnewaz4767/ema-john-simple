@@ -1,5 +1,4 @@
 import React, { createContext, useState } from 'react';
-import './App.css';
 import Header from './components/Header/Header';
 import Shop from './components/Shop/Shop';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -10,6 +9,7 @@ import ProductDetail from './components/ProductDetail/ProductDetail';
 import Login from './components/Login/Login';
 import Shipment from './components/Shipment/Shipment';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import './App.css';
 
 
 export const userContext = createContext();
@@ -21,7 +21,7 @@ function App() {
   return (
     
     <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <h3>Email: {loggedInUser.email}</h3>
+      <h3 className="email">Email: {loggedInUser.email}</h3>
       <Router>
         <Header></Header>
         <Switch>

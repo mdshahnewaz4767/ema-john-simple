@@ -1,0 +1,19 @@
+.ship-form{
+    margin: 30px 100px;
+}
+.ship-form input{
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+}
+.error{
+    color: red;
+}
+input[type="submit"]{
+    margin-top: 1rem;
+    padding: 5px;
+    width: 100px;
+}
