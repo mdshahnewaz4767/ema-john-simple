@@ -1,0 +1,13 @@
+input{
+    margin: 5px 0px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    padding: 10px;
+    padding-right: 84px;
+}
+input[type="submit"]{
+    margin-top: 1rem;
+    padding: 5px;
+}
