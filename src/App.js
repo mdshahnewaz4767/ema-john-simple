@@ -15,13 +15,11 @@ import './App.css';
 export const userContext = createContext();
 
 function App() {
-
   const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
-    
+
     <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <h3 className="email">Email: {loggedInUser.email}</h3>
       <Router>
         <Header></Header>
         <Switch>
@@ -52,6 +50,7 @@ function App() {
         </Switch>
       </Router>
     </userContext.Provider>
+    
   );
 }
 
