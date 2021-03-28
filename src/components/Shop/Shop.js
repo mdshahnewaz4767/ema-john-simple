@@ -35,9 +35,9 @@ const Shop = () => {
         })
     }, [])
 
+    
     // order Summery
     const handleAddProduct = (pd) => {
-        // console.log("added", pd);
         const toBeAddedKey = pd.key;
         const sameProduct = cart.find(product => product.key === toBeAddedKey);
         let count = 1;
@@ -75,6 +75,5 @@ const Shop = () => {
         </div>
     );
 };
-
 
 export default Shop;

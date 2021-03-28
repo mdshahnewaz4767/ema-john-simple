@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-LoginManager.js
 firebase.config.js
 
 /.pnp

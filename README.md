@@ -1,5 +1,5 @@
 # ema-john-simple
-### [Live Site](https://ema-john-simple-bd.netlify.app/) 
+### [Live Site](https://ema-john-simple-cc053.web.app/) 
 A complete MERN stack E-commerce website where users can explore new products and can buy products using credit cards.
 
 # Features 
