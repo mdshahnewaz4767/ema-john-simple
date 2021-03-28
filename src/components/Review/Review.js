@@ -4,6 +4,7 @@ import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import HappyImage from '../../images/giphy.gif';
 import { useHistory } from 'react-router';
+import fakeData from '../../fakeData';
 
 
 const Review = () => {
@@ -23,7 +24,13 @@ const Review = () => {
         })
         .then(res => res.json())
         .then(data => {
-            setCart(data);
+            // console.log(data);
+            const cartProducts= productKeys.map(key => {
+                const product = data.find(pd => pd.key === key);
+                product.quantity = saveCart[key];
+                return product;
+            })
+            setCart(cartProducts);
         })
     }, [])
 

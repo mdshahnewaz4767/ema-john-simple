@@ -20,20 +20,17 @@ const Shop = () => {
 
     useEffect(() => {
         const savedCart = getDatabaseCart();
-        const productKeys = Object.keys(savedCart);
-
-        fetch("https://hidden-dusk-07005.herokuapp.com/productsByKeys", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(productKeys)
-        })
-        .then(res => res.json())
-        .then(data => {
-            setCart(data);
-        })
-    }, [])
+        const productsKey = Object.keys(savedCart);
+        //console.log(products);
+        if(products.length){
+            const previousCart = productsKey.map(existingKey => {
+                const product = products.find(pd => pd.key === existingKey);
+                product.quantity = savedCart[existingKey];
+                return product;
+            })
+            setCart(previousCart);
+        }
+    }, [products])
 
     
     // order Summery
@@ -44,7 +41,7 @@ const Shop = () => {
         let newCart;
         if(sameProduct){
             count = sameProduct.quantity + 1;
-            sameProduct.quantity = count + 1;
+            sameProduct.quantity = count;
             const others = cart.filter(product => product.key !== toBeAddedKey);
             newCart = [...others, sameProduct];
         }
