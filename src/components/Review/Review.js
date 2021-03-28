@@ -4,13 +4,12 @@ import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import HappyImage from '../../images/giphy.gif';
 import { useHistory } from 'react-router';
-import fakeData from '../../fakeData';
 
 
 const Review = () => {
 
     const [cart, setCart] = useState([])
-    //cart data
+   
     useEffect(() => {
         const saveCart =  getDatabaseCart();
         const productKeys = Object.keys(saveCart);
