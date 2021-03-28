@@ -15,6 +15,10 @@ A complete MERN stack E-commerce website where users can explore new products an
 - Bootstrap 4
 - Firebase Authentication
 - Firebase Hosting
+- Express js
+- MongoDB
+
+Backend Repository: [link](https://github.com/shahnewaz171/ema-john-simple-server)
 
 
 

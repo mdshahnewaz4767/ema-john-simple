@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+LoginManager.js
+firebase.config.js
+
 /.pnp
 .pnp.js
 
@@ -21,3 +24,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
