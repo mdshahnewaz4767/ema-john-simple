@@ -51,7 +51,7 @@ const Shipment = () => {
                 </form>
             </div>
             <div className="col-md-6">
-                <h2>Please pay for me</h2>
+                <h2 className="mb-4 mt-3">Please pay for me</h2>
                 <ProcessPayment></ProcessPayment>
             </div>
         </div>
