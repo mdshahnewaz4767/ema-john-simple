@@ -8,6 +8,8 @@
 .product h4{
     color: blue;
     font-weight: 400;
+    font-size: 1.1rem !important;
+    margin-top: 10px;
 }
 .product img{
     margin: 10px;
