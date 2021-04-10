@@ -1,4 +1,5 @@
-.ship-form{
+.ship-form,
+.payProcess{
     margin: 30px 100px;
 }
 .ship-form input{

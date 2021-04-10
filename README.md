@@ -15,6 +15,7 @@ A complete MERN stack E-commerce website where users can explore new products an
 - Bootstrap 4
 - Firebase Authentication
 - Firebase Hosting
+- Stripe Payment
 - Express js
 - MongoDB
 

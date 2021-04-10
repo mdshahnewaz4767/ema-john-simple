@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 
-const CheckoutForm = () => {
+const SimpleCardForm = ({handlePayment}) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -35,6 +35,7 @@ const CheckoutForm = () => {
     } else {
       setPaymentSuccess(paymentMethod.id)
       setPaymentError(null);
+      handlePayment(paymentMethod.id)
     }
   };
 
@@ -56,4 +57,4 @@ const CheckoutForm = () => {
   );
 };
 
-export default CheckoutForm;
+export default SimpleCardForm;
